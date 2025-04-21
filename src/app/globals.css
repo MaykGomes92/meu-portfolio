@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-display: "Satoshi", "sans-serif";
+  --breakpoint-3xl: 120rem;
+  --color-avocado-100: oklch(0.99 0 0);
+  --color-avocado-200: oklch(0.98 0.04 113.22);
+  --color-avocado-300: oklch(0.94 0.11 115.03);
+  --color-avocado-400: #634465;
+  --color-avocado-500: oklch(0.84 0.18 117.33);
+  --color-avocado-600: oklch(0.53 0.12 118.34);
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  --color-purple-padrao: #6366f1;
+  /* ... */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+#load{
+animation: rotateLoading infinite 5s linear;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+@keyframes rotateLoading {
+  0% {
+    transform: rotate(0deg);
+    border: 9px solid #232323;
+    border-right-color: #ae3b7a;
+    scale: 1;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  20%{
+    border: 9px solid #6b4c4c;
+    border-right-color: #4e1d8a;
+    scale: 0.8;
+  }
+  40%{
+    border: 9px solid #6a25b4;
+    border-right-color: #9d769b;
+    scale: 1;
+  }
+  60%{
+    border: 9px solid #931bd3;
+    border-right-color: #d713f1;
+    scale: 0.8;
+  }
+  80%{
+    border: 9px solid #d713f1;
+    border-right-color: #6e0753;
+    scale: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    border: 9px solid #f2f2f2;
+    border-right-color: #d713f1;
+  }
 }
