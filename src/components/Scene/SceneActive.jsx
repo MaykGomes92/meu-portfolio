@@ -100,9 +100,9 @@ export default function SceneActive() {
           />
 
         </div>
-        <p className='text-white text-center text-[20px] transition-transform duration-1000 transform hover:scale-115 hover:rotate-x-[5deg] hover:rotate-y-[45deg]'>Desenvolvedor Full-stack especializado em criar experiências digitais modernas,interativas e de alto impacto. Combinando design elegante com código eficiente para desenvolver soluções web inovadoras.</p>
+        <p className='text-white text-center text-[20px] transition-transform duration-1000 transform hover:scale-115 hover:rotate-x-[5deg] hover:rotate-y-[25deg]'>Desenvolvedor Full-stack especializado em criar experiências digitais modernas,interativas e de alto impacto. Combinando design elegante com código eficiente para desenvolver soluções web inovadoras.</p>
         <div className='flex justify-center gap-10 mt-10'>
-          <Link href="/about" legacyBehavior>
+          <Link href="/sobre" legacyBehavior>
             <a>
               <motion.button
                 className="relative cursor-pointer px-7 py-3 font-medium text-white bg-purple-600 rounded-lg overflow-hidden group"

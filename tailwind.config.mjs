@@ -8,6 +8,13 @@ const config = {
     extend: {
       colors: {
         'purple-padrao': '#6366f1',
+        'neon-blue': '#00D4FF',
+        'electric-purple': '#7B61FF',
+        'deep-black': '#121212',
+        'light-gray': '#c7cbd2',
+        'dark': '#121212',
+        'light': '#f7f7f7',
+        'accent': '#823cf5',
       },
     },
   },

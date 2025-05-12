@@ -4,7 +4,6 @@ import WelcomeTela from '@/WelcomeTela';
 import { motion } from 'framer-motion';
 import ParticlesComponent from '@/components/particles';
 import Loading from '@/components/Loading';
-import Projetos from '@/components/Projetos/Projetos';
 
 export default function Home() {
   const [load, setUpdateLoad] = React.useState(true);
@@ -12,23 +11,22 @@ export default function Home() {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setUpdateLoad(false);
-    }, 3000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  if(load){
+  if (load) {
     return (
       <div className="w-full h-screen flex justify-center items-center">
-        <Loading/>
+        <Loading />
       </div>
     );
-  }else {
+  } else {
     return (
       <div className="">
-      <WelcomeTela/>
-      <Projetos/>
-    </div>
-  );
-}
+        <WelcomeTela />
+      </div>
+    );
+  }
 }
