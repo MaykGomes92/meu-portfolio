@@ -103,10 +103,10 @@ export default function CursorEffects() {
       >
         <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full blur-md transition-all duration-200 ${
             isClicking
-            ? 'bg-[#823cf540] scale-90'
+            ? 'bg-[#823cf580] scale-120'
             : isHovering
-              ? 'bg-[#6366f130] scale-110'
-              : 'bg-[#4f46e520]'
+              ? 'bg-[#6366f130] scale-160'
+              : 'bg-[#4f46e580]'
           }`}></div>
 
         <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full blur-[2px] transition-all duration-200 
@@ -118,13 +118,13 @@ export default function CursorEffects() {
         : 'bg-[#818cf840]'
     }`} ></div>
 
-      <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full transition-all duration-200 
+      <div className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 rounded-full transition-all duration-200 
     ${
       isClicking
         ? 'bg-accent'
         : isHovering
-        ? 'bg-primary-400 animate-pulse'
-        : 'bg-primary-300'
+        ? 'bg-[#818cf8] animate-pulse'
+        : 'bg-[#a5b4fc]'
     }`} ></div>
     </motion.div >
 

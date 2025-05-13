@@ -4,7 +4,7 @@ import WelcomeTela from '@/WelcomeTela';
 import { motion } from 'framer-motion';
 import ParticlesComponent from '@/components/particles';
 import Loading from '@/components/Loading';
-
+import PageTransicao from '@/components/PageTransicao/PageTransicao';
 export default function Home() {
   const [load, setUpdateLoad] = React.useState(true);
 

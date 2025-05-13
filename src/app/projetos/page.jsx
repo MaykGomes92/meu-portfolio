@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import ProjectCard from './ProjectCard';
 import Loading from '@/components/Loading';
 import Sidebar from '@/components/Sidebar/Sidebar'
-
+import PageTransicao from '@/components/PageTransicao/PageTransicao';
 const categories = ['All', 'Web', 'Mobile', 'UI/UX', '3D', 'Backend']
 
 const projects = [
@@ -111,7 +111,12 @@ export default function Projetos() {
   } else {
     return (
       <>
-        <div className='pt-20 bg-[#121212] min-h-[100vh] max-w-[100vw] m-auto md:pb-0'>
+        <PageTransicao />
+        <motion.div className='pt-20 bg-[#121212] min-h-[100vh] max-w-[100vw] m-auto md:pb-0'
+          animate={{ opacity: 1, }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: .6, delay: 0.8 }}
+        >
           <Header activePage="sobre" />
           <Sidebar />
           <motion.h1
@@ -121,7 +126,7 @@ export default function Projetos() {
             }}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 1.3 }}
           >
             My Projects
           </motion.h1>
@@ -130,7 +135,7 @@ export default function Projetos() {
             className="text-light-gray text-center mb-10 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 1.3 }}
           >
             A collection of my work across web, mobile, and 3D interactive experiences
           </motion.p>
@@ -141,7 +146,7 @@ export default function Projetos() {
               className="flex flex-wrap justify-center gap-3 mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 1.3 }}
             >
               {categories.map((category) => (
                 <motion.button
@@ -163,7 +168,7 @@ export default function Projetos() {
               className="flex justify-center mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 1.3 }}
             >
               <div className="relative w-full max-w-md">
                 <input
@@ -195,7 +200,7 @@ export default function Projetos() {
                     initial={{ opacity: 0, y: 120 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4, }}
+                    transition={{ duration: 0.4}}
                     layout
                     className='w-[90%]'
                   >
@@ -220,7 +225,8 @@ export default function Projetos() {
               )}
             </AnimatePresence>
           </div>
-        </div>
+        </motion.div>
       </>
     )
-}}
+  }
+}

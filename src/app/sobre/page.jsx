@@ -10,7 +10,7 @@ import MinhaTrajetoria from '@/components/MinhaTrajetoria/MinhaTrajetoria';
 import Loading from '@/components/Loading';
 import Timeline from '@/components/MinhaTrajetoria/Timeline';
 import Sidebar from '@/components/Sidebar/Sidebar'
-
+import PageTransicao from '@/components/PageTransicao/PageTransicao';
 export default function Sobre() {
 
   const [load, setUpdateLoad] = React.useState(true);
@@ -36,8 +36,8 @@ export default function Sobre() {
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
-    animate: { 
-      opacity: 1, 
+    animate: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
@@ -77,13 +77,18 @@ export default function Sobre() {
   } else {
     return (
       <>
-        <div className='pt-30 bg-[#121212] max-w-[100vw] m-auto md:pb-0 pb-8'>
+        <PageTransicao />
+        <motion.div className='pt-30 bg-[#121212] max-w-[100vw] m-auto md:pb-0 pb-8'
+          animate={{ opacity: 1, }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: .6, delay: 0.8 }}
+        >
           <Header />
           <Sidebar />
           <motion.div className='max-w-[1200px] m-auto'
             animate={{ opacity: 1, y: 0 }}
             initial={{ opacity: [0, 0.4, 0.5], y: -90 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: .5, delay: 1 }}
           >
             <h1 className='text-5xl font-bold text-white mb-10'>Sobre <span className='text-[#00d4ff]'>Mim</span></h1>
             <div className='md:flex text-white gap-8'>
@@ -147,17 +152,17 @@ export default function Sobre() {
               </div>
             </div>
           </motion.div>
-        </div>
-        <MyTecnologias title='Minhas' subTitle='Habilidades'/>
-        <motion.div
-          variants={fadeInUp}
-          initial="initial"
-          animate="animate"
-          className='bg-[#121212] max-w-[100vw] m-auto p-6 md:pb-0 pb-8' 
-        >
-          <h2 className="text-4xl font-bold mb-8 text-white w-[50%] text-center">Minha <span className="text-neon-blue">Trajetória</span></h2>
+          <MyTecnologias title='Minhas' subTitle='Habilidades' />
+          <motion.div
+            variants={fadeInUp}
+            initial="initial"
+            animate="animate"
+            className='bg-[#121212] max-w-[100vw] m-auto p-6 md:pb-0 pb-8'
+          >
+            <h2 className="text-4xl font-bold mb-8 text-white w-[50%] text-center">Minha <span className="text-neon-blue">Trajetória</span></h2>
 
-          <Timeline events={timelineEvents} />
+            <Timeline events={timelineEvents} />
+          </motion.div>
         </motion.div>
       </>
     )
