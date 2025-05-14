@@ -10,7 +10,7 @@ import {
 } from '../icons';
 
 
-export default function Sidebar({ activePage }) {
+export default function Sidebar({ activePage, open=true }) {
   const [expanded, setExpanded] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -30,8 +30,9 @@ export default function Sidebar({ activePage }) {
   if (!mounted) return null;
 
   return (
+    open ??
     <motion.aside
-      className="fixed inset-0 flex justify-center items-center z-[999]"
+      className="fixed inset-0 flex justify-center items-center z-[98]"
       animate={{
         width: expanded ? 220 : 64,
         height: 'auto',
@@ -53,8 +54,8 @@ export default function Sidebar({ activePage }) {
                     <a title={item.name}>
                       <motion.div
                         className={`flex items-center ${expanded ? 'justify-start' : 'justify-center'} p-2 rounded-full transition-all relative ${isActive
-                            ? "text-white  border-l-[3px] border-purple-padrao"
-                            : "text-gray-300 hover:text-white hover:bg-[#6366f1]/5"
+                          ? "text-white  border-l-[3px] border-purple-padrao"
+                          : "text-gray-300 hover:text-white hover:bg-[#6366f1]/5"
                           }`}
                         whileHover={{ x: 3 }}
                         whileTap={{ scale: 0.95 }}

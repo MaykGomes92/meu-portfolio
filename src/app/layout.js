@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR">
       <title>Mayk Gomes | Portfolio</title>
       <meta name="description" content="Portfolio criado em NextJs com TailwindCss, Canvas, ThreeJs e framemotion, descrevendo toda a experiência de Mayk Gomes como desenvolvedor de Software e sua jornada." />
-      <body >
+      <body className="bg-dark-black">
         <CursorEffects/>
         {children}
       </body>

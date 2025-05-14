@@ -4,6 +4,8 @@ import MyTecnologias from '@/components/MyTecnologias/MyTecnologias'
 import Header from '@/components/Header/Header'
 import Loading from '@/components/Loading'
 import Sidebar from '@/components/Sidebar/Sidebar'
+import PageTransicao from '@/components/PageTransicao/PageTransicao'
+import { motion } from 'framer-motion'
 export default function Habilidades() {
 
   const [load, setUpdateLoad] = React.useState(true);
@@ -25,16 +27,22 @@ export default function Habilidades() {
     );
   } else {
     return (
-      <div className='flex flex-col justify-center h-[100vh] bg-[#121212]'>
-        <Header />
-        <Sidebar />
-        <Sidebar />
-        <div className=''>
-          <MyTecnologias subTitle='Habilidades Técnicas' description='Explore minhas competências e níveis de proficiência em diferentes tecnologias
+      <>
+        <PageTransicao />
+        <motion.div className='flex flex-col justify-center h-[100vh] bg-[#121212]'
+          animate={{ opacity: 1, }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: .6, delay: 0.8 }}
+        >
+          <Header />
+          <Sidebar />
+          <div className=''>
+            <MyTecnologias subTitle='Habilidades Técnicas' description='Explore minhas competências e níveis de proficiência em diferentes tecnologias
 
 '/>
-        </div>
-      </div>
+          </div>
+        </motion.div>
+      </>
     )
   }
 }

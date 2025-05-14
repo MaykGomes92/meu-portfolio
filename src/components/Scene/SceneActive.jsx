@@ -119,7 +119,7 @@ export default function SceneActive() {
               </motion.button>
             </a>
           </Link>
-          <Link href="/contact" legacyBehavior>
+          <Link href="/contato" legacyBehavior>
             <a>
               <motion.button
                 className="relative cursor-pointer px-7 py-3 font-medium text-[#909dda] bg-transparent rounded-lg border border-primary-500/30 overflow-hidden group"

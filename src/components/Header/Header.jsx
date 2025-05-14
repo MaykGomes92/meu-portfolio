@@ -187,7 +187,7 @@ const Navbar = ({ activePage = "/" }) => {
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="md:hidden bg-secondary-900/95 backdrop-blur-md border-b border-primary-500/10"
           >
-            <div className="px-2 py-3 space-y-1">
+            <div className="px-2 py-3 space-y-1 z-[99]">
               {navItems.map((item) => (
                 <Link 
                   key={item.name} 
