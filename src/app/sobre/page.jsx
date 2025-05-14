@@ -11,6 +11,8 @@ import Loading from '@/components/Loading';
 import Timeline from '@/components/MinhaTrajetoria/Timeline';
 import Sidebar from '@/components/Sidebar/Sidebar'
 import PageTransicao from '@/components/PageTransicao/PageTransicao';
+import ParticlesComponent from '@/components/particles';
+
 export default function Sobre() {
 
   const [load, setUpdateLoad] = React.useState(true);
@@ -78,18 +80,20 @@ export default function Sobre() {
     return (
       <>
         <PageTransicao />
-        <motion.div className='pt-30 bg-[#121212] max-w-[100vw] m-auto md:pb-0 pb-8'
+        <ParticlesComponent id="particles" />
+        <motion.div className='relative pt-30 max-w-[100vw] m-auto md:pb-0 pb-8 z-[2]'
           animate={{ opacity: 1, }}
           initial={{ opacity: 0 }}
           transition={{ duration: .6, delay: 0.8 }}
         >
           <Header />
           <Sidebar />
-          <motion.div className='max-w-[1200px] m-auto'
+          <motion.div className='max-w-[1200px] m-auto md:p-0 p-4'
             animate={{ opacity: 1, y: 0 }}
             initial={{ opacity: [0, 0.4, 0.5], y: -90 }}
             transition={{ duration: .5, delay: 1 }}
           >
+          <ParticlesComponent id="particles" />
             <h1 className='text-5xl font-bold text-white mb-10'>Sobre <span className='text-[#00d4ff]'>Mim</span></h1>
             <div className='md:flex text-white gap-8'>
               <div className='flex flex-col gap-4 text-[#b7b7b7] text-[18px] font-semibold'>
@@ -157,7 +161,7 @@ export default function Sobre() {
             variants={fadeInUp}
             initial="initial"
             animate="animate"
-            className='bg-[#121212] max-w-[100vw] m-auto p-6 md:pb-0 pb-8'
+            className=' max-w-[100vw] m-auto p-6 md:pb-0 pb-8'
           >
             <h2 className="text-4xl font-bold mb-8 text-white w-[50%] text-center">Minha <span className="text-neon-blue">Trajetória</span></h2>
 

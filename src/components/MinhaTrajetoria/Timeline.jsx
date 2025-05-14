@@ -21,9 +21,9 @@ export default function Timeline({ events }) {
         >
           {/* Ponto da linha do tempo */}
           <div 
-            className="absolute md:top-2 top-14 left-5 md:left-auto md:right-0 w-5 h-5 rounded-full border-2 border-neon-blue bg-deep-black z-10 shadow-md shadow-neon-blue/50"
+            className="absolute md:top-2 top-11 left-5 md:left-auto md:right-0 w-5 h-5 rounded-full border-2 border-neon-blue bg-deep-black z-10 shadow-md shadow-neon-blue/50"
             style={{ 
-              [index % 2 === 0 ? 'right' : 'left']: '-11px',
+              [index % 2 === 0 ? 'right' : 'left']: '7px',
             }}
           ></div>
 

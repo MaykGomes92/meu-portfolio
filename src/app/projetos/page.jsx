@@ -18,7 +18,7 @@ const projects = [
     image: '/global-series.jpg',
     category: ['ReactJs', 'StyledComponents', 'Javascript', 'Web'],
     technologies: ['React', 'Three.js', 'TailwindCSS'],
-    github: 'https://github.com/MaykGomes92',
+    github: 'https://global-series.vercel.app/',
     demo: 'https://www.linkedin.com/in/mayk-gomes-11b86222b/',
     featured: true,
   },
@@ -191,7 +191,7 @@ export default function Projetos() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 p-8 items-center justify-items-center w-[80%] m-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 p-8 items-center justify-items-center md:w-[80%] w-[100%] m-auto">
             <AnimatePresence>
               {filteredProjects.length > 0 ? (
                 filteredProjects.map((project) => (

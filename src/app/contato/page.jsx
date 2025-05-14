@@ -6,6 +6,7 @@ import Header from '@/components/Header/Header'
 import Sidebar from '@/components/Sidebar/Sidebar'
 import PageTransicao from '@/components/PageTransicao/PageTransicao'
 import Loading from '@/components/Loading'
+import ParticlesComponent from '@/components/particles'
 export default function Page() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
@@ -62,14 +63,15 @@ export default function Page() {
   return (
     <>
       <PageTransicao />
-      <motion.div className="relative bg-dark-black h-[100vh]"
+      <ParticlesComponent id="particles" />
+      <motion.div className="relative z-20 h-[100vh]"
         animate={{ opacity: 1, }}
         initial={{ opacity: 0 }}
         transition={{ duration: .6, delay: 0.8 }}
       >
         <Header />
         <Sidebar />
-        <div className="py-10 px-6 bg-dark-black">
+        <div className="py-10 px-6">
           <motion.h1
             className="text-4xl md:text-5xl font-bold mb-2 text-light-gray text-center mt-10"
             initial={{ opacity: 0, y: -20 }}

@@ -6,6 +6,7 @@ import Sidebar from '@/components/Sidebar/Sidebar'
 import { motion } from 'framer-motion';
 import Timeline from '@/components/MinhaTrajetoria/Timeline'
 import PageTransicao from '@/components/PageTransicao/PageTransicao';
+import ParticlesComponent from '@/components/particles'
 const timelineEvents = [
   {
     year: '2024 - Presente',
@@ -51,14 +52,15 @@ export default function Experiencia() {
     return (
       <>
         <PageTransicao />
-        <motion.div className='flex flex-col h-[100vh] bg-dark-black'
+        <ParticlesComponent id="particles" />
+        <motion.div className='relative z-30 flex flex-col h-[100vh]'
           animate={{ opacity: 1, y: 20 }}
           initial={{ opacity: 0, y: 0 }}
           transition={{ duration: .6, delay: 1.5 }}
         >
           <Header />
           <Sidebar />
-          <div className='mt-20 bg-dark-black'>
+          <div className='mt-20'>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

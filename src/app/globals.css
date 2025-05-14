@@ -57,3 +57,7 @@ animation: rotateLoading infinite 5s linear;
     border-right-color: #d713f1;
   }
 }
+
+#particles {
+  position: absolute;
+}

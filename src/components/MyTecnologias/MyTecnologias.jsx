@@ -41,7 +41,7 @@ export default function MyTecnologias({title, subTitle, description}) {
   ];
 
   return (
-    <div className=' text-center text-red-400 bg-[#121212] m-auto pb-20'>
+    <div className='relative z-20 text-center text-red-400 m-auto pb-20'>
       <div className='max-w-[1200px] m-auto '>
         <motion.div
           variants={fadeInUp}

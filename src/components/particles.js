@@ -102,7 +102,7 @@ const ParticlesComponent = (props) => {
   );
 
   if(init){
-    return <Particles id={props.id} init={particlesLoaded} options={options} />; 
+    return <Particles id={props.id} init={particlesLoaded} options={options}/>; 
   }
   return<></>
 };

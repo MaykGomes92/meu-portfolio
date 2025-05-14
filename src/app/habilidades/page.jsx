@@ -6,6 +6,7 @@ import Loading from '@/components/Loading'
 import Sidebar from '@/components/Sidebar/Sidebar'
 import PageTransicao from '@/components/PageTransicao/PageTransicao'
 import { motion } from 'framer-motion'
+import ParticlesComponent from '@/components/particles'
 export default function Habilidades() {
 
   const [load, setUpdateLoad] = React.useState(true);
@@ -29,7 +30,8 @@ export default function Habilidades() {
     return (
       <>
         <PageTransicao />
-        <motion.div className='flex flex-col justify-center h-[100vh] bg-[#121212]'
+        <ParticlesComponent id="particles" />
+        <motion.div className='relative z-20 flex flex-col justify-center h-[100vh]'
           animate={{ opacity: 1, }}
           initial={{ opacity: 0 }}
           transition={{ duration: .6, delay: 0.8 }}

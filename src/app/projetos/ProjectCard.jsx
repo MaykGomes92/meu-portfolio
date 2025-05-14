@@ -50,7 +50,7 @@ export default function ProjectCard({ project }) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg bg-[#334155] text-white text-sm py-2.5 px-7 font-medium flex  shadow-lg text-center"
+              className="rounded-lg bg-[#334155] text-white text-sm py-2.5 px-7 font-medium flex  shadow-lg text-center "
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -70,7 +70,7 @@ export default function ProjectCard({ project }) {
 
       {/* Informações */}
       <div className="p-6 flex-1 flex flex-col">
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-primary-400 transition-colors">{project.title}</h3>
+        <a href={project.github} target='_blank' className="text-xl font-bold mb-2 text-white group-hover:text-primary-400 transition-colors">{project.title}</a>
         <p className="text-gray-300 text-sm mb-4 flex-1 line-clamp-3">{project.description}</p>
 
         <div className="mb-3 flex flex-wrap gap-2">
