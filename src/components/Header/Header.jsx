@@ -54,7 +54,9 @@ const Navbar = ({ activePage = "/" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState(activePage);
-  
+  const [isActive, setIsActive] = React.useState(usePathname())
+
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -90,7 +92,7 @@ const Navbar = ({ activePage = "/" }) => {
       animate="visible"
       className={`fixed  top-0 w-full z-99 transition-all duration-300 ease-in-out hover:scale-105${
         scrolled 
-          ? "bg-secondary-900/80 backdrop-blur-md shadow-md border-b border-primary-500/10" 
+          ? "bg-[#0f172a80] backdrop-blur-md shadow-md border-b border-[#2775e410]" 
           : "bg-transparent"
       }`}
     >
@@ -101,12 +103,12 @@ const Navbar = ({ activePage = "/" }) => {
             <Link href="/" legacyBehavior>
               <a className="flex items-center gap-2 group">
                 <div className="hidden sm:block">
-                  <h2 className="text-sm font-semibold text-white group-hover:text-primary-300 transition-colors hover:text-[#909dda]">Portfolio</h2>
+                  <h2 className="text-sm font-semibold text-white group-hover:text-[#a5b4fc] transition-colors hover:text-[#909dda]">Portfolio</h2>
                   <span className="text-xs font-medium text-[#909dda]">Desenvolvedor Front-end</span>
                 </div>
               </a>
             </Link>
-          </div>
+          </div>  
 
           {/* Desktop navigation */}
           <nav className="hidden md:block">
@@ -117,14 +119,13 @@ const Navbar = ({ activePage = "/" }) => {
               className="flex items-center space-x-1"
             >
               {navItems.map((item) => {
-                const isActive = usePathname() === item.path;
                 
                 return (
                   <motion.li key={item.name} variants={itemVariants}>
                     <Link href={item.path} legacyBehavior>
                       <a 
                         className={`flex items-center px-3 py-2 text-sm font-medium rounded-full transition-all ${
-                          isActive 
+                          isActive === item.path
                             ? "text-white  border-l-[3px] border-purple-padrao" 
                             : "text-gray-300 hover:text-white hover:bg-primary-500/5"
                         }`}
@@ -160,7 +161,7 @@ const Navbar = ({ activePage = "/" }) => {
 
           <button 
             type="button"
-            className="md:hidden p-2 cursor-pointer rounded-full bg-white text-primary-400 hover:text-white hover:bg-purple-padrao transition delay-50 duration-300 ease-in-out"
+            className="md:hidden p-2 cursor-pointer rounded-full bg-white text-[#818cf8] hover:text-white hover:bg-purple-padrao transition delay-50 duration-300 ease-in-out"
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
           >
@@ -185,7 +186,7 @@ const Navbar = ({ activePage = "/" }) => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="md:hidden bg-secondary-900/95 backdrop-blur-md border-b border-primary-500/10"
+            className="md:hidden bg-[#0f172a95] backdrop-blur-md border-b border-[#6366f110]"
           >
             <div className="px-2 py-3 space-y-1 z-[99]">
               {navItems.map((item) => (
@@ -196,9 +197,9 @@ const Navbar = ({ activePage = "/" }) => {
                 >
                   <a 
                     className={`flex items-center px-3 py-2 text-base font-medium rounded-lg ${
-                      activeSection === item.path 
-                        ? "text-white bg-primary-500/20 border-l-2 border-primary-500" 
-                        : "text-gray-300 hover:text-white hover:bg-primary-500/10"
+                      isActive === item.path 
+                        ? "text-white bg-[#6366f120] border-l-2 border-[##6366f1]" 
+                        : "text-gray-300 hover:text-white hover:bg-[#6366f110]"
                     }`}
                     onClick={() => {
                       setActiveSection(item.path);

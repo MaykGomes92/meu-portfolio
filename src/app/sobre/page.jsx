@@ -20,7 +20,7 @@ export default function Sobre() {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setUpdateLoad(false);
-    }, 1000);
+    }, 1300);
 
     return () => clearTimeout(timer);
   }, []);
@@ -81,7 +81,7 @@ export default function Sobre() {
       <>
         <PageTransicao />
         <ParticlesComponent id="particles" />
-        <motion.div className='relative pt-30 max-w-[100vw] m-auto md:pb-0 pb-8 z-[2]'
+        <motion.div className='relative pt-30 max-w-[100vw] m-auto md:pb-0 pb-8 z-[4]'
           animate={{ opacity: 1, }}
           initial={{ opacity: 0 }}
           transition={{ duration: .6, delay: 0.8 }}
