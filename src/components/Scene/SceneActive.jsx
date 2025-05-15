@@ -1,14 +1,14 @@
 'use client';
 import { Canvas } from '@react-three/fiber';
 import Typewriter from 'typewriter-effect';
-import { OrbitControls, Environment } from '@react-three/drei';
+import { Environment } from '@react-three/drei';
 import DefaultScene from './DefaultScene';
 import Image from 'next/image';
 import { motion, useMotionValue, useTransform, useAnimationFrame } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 import { MdOutlineMail } from "react-icons/md";
 
 export default function SceneActive() {
@@ -142,9 +142,9 @@ export default function SceneActive() {
           className="flex justify-center gap-14 p-4 mt-4"
         >
           {[
-            { icon: <FaGithub color='#ffff'size='30px'/>, url: "https://github.com/MaykGomes92", label: "GitHub" },
-            { icon: <FaLinkedin color='#ffff' size='30px'/>, url: "https://www.linkedin.com/in/mayk-gomes-11b86222b/", label: "LinkedIn" },
-            { icon: <MdOutlineMail color='#ffff' size='30px'/>, url: "/contact", label: "Contact" }
+            { icon: <FaGithub color='#ffff' size='30px' />, url: "https://github.com/MaykGomes92", label: "GitHub" },
+            { icon: <FaLinkedin color='#ffff' size='30px' />, url: "https://www.linkedin.com/in/mayk-gomes-11b86222b/", label: "LinkedIn" },
+            { icon: <MdOutlineMail color='#ffff' size='30px' />, url: "/contact", label: "Contact" }
           ].map((social, index) => (
             <motion.a
               key={index}
@@ -169,7 +169,7 @@ export default function SceneActive() {
         <directionalLight position={[2, 5, 2]} intensity={1} />
         <Environment preset="sunset" />
         <DefaultScene scale={0.15} position={[0, -1.2, 0]} />
-        
+
       </Canvas>
     </div>
   );

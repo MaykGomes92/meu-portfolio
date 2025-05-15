@@ -1,11 +1,15 @@
 import React from 'react'
 import Header from './components/Header/Header'
 import ParticlesComponent from '@/components/particles';
-import SceneActive from './components/Scene/SceneActive';
+import dynamic from 'next/dynamic'
 import Sidebar from './components/Sidebar/Sidebar';
 import PageTransicao from './components/PageTransicao/PageTransicao';
 import { motion } from 'framer-motion';
+
+const SceneActive = dynamic(() => import('@/components/Scene/SceneActive'), { ssr: false });
+
 export default function WelcomeTela() {
+
   return (
     <>
       <PageTransicao />
@@ -15,7 +19,7 @@ export default function WelcomeTela() {
         transition={{ duration: .6, delay: 0.8 }}
       >
         <Header />
-        <Sidebar open={false}/>
+        <Sidebar open={false} />
         <SceneActive />
         <ParticlesComponent id="particles" />
       </motion.div>
