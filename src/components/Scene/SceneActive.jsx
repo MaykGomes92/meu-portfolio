@@ -105,7 +105,7 @@ export default function SceneActive() {
           <Link href="/sobre" legacyBehavior>
             <a>
               <motion.button
-                className="relative cursor-pointer px-7 py-3 font-medium text-white bg-purple-padrao rounded-lg overflow-hidden group"
+                className="relative cursor-pointer px-7 py-3 font-medium text-white bg-purple-600 rounded-lg overflow-hidden group"
                 whileHover={{ y: -2, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.2)" }}
                 whileTap={{ y: 0, boxShadow: "none", scale: 0.98 }}
               >
@@ -128,7 +128,7 @@ export default function SceneActive() {
               >
                 <span className="relative z-10 group-hover:text-white transition-colors duration-300">Entre em Contato</span>
                 <motion.div
-                  className="absolute inset-0 bg-[#4f46e590]"
+                  className="absolute inset-0 bg-primary-600/90"
                   initial={{ y: '100%' }}
                   whileHover={{ y: 0 }}
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
