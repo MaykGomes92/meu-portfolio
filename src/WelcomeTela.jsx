@@ -13,7 +13,7 @@ export default function WelcomeTela() {
   return (
     <>
       <PageTransicao />
-      <motion.div className='relative  mt-[150px] '
+      <motion.div className='relative mt-[150px] '
         animate={{ opacity: 1, }}
         initial={{ opacity: 0 }}
         transition={{ duration: .6, delay: 0.8 }}

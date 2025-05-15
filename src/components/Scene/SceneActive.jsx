@@ -5,7 +5,7 @@ import { Environment } from '@react-three/drei';
 import DefaultScene from './DefaultScene';
 import Image from 'next/image';
 import { motion, useMotionValue, useTransform, useAnimationFrame } from 'framer-motion';
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -155,7 +155,7 @@ export default function SceneActive() {
               aria-label={social.label}
               target='blank'
             >
-              <i className={`text-xl`}>{social.icon}</i>
+              <i className='text-xl'>{social.icon}</i>
               <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-xs text-primary-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {social.label}
               </span>
@@ -168,8 +168,10 @@ export default function SceneActive() {
         <ambientLight intensity={0.1} />
         <directionalLight position={[2, 5, 2]} intensity={1} />
         <Environment preset="sunset" />
-        <DefaultScene scale={0.15} position={[0, -1.2, 0]} />
 
+        <Suspense fallback={null}>
+          <DefaultScene scale={0.15} position={[0, -1.2, 0]} />
+        </Suspense>
       </Canvas>
     </div>
   );
