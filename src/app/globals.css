@@ -60,4 +60,5 @@ animation: rotateLoading infinite 5s linear;
 
 #particles {
   position: absolute;
+  z-index: 1;
 }

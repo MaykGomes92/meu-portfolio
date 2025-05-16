@@ -14,7 +14,7 @@ export default function Habilidades() {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setUpdateLoad(false);
-    }, 1000);
+    }, 1700);
 
     return () => clearTimeout(timer);
   }, []);
@@ -31,7 +31,7 @@ export default function Habilidades() {
       <>
         <PageTransicao />
         <ParticlesComponent id="particles" />
-        <motion.div className='relative z-20 flex flex-col justify-center h-[100vh]'
+        <motion.div className='relative z-3 flex flex-col md:justify-center mt-12 p-2 h-[100vh] md:mt-0 md:p-0'
           animate={{ opacity: 1, }}
           initial={{ opacity: 0 }}
           transition={{ duration: .6, delay: 0.8 }}

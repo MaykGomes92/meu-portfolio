@@ -8,6 +8,7 @@ import ProjectCard from './ProjectCard';
 import Loading from '@/components/Loading';
 import Sidebar from '@/components/Sidebar/Sidebar'
 import PageTransicao from '@/components/PageTransicao/PageTransicao';
+import ParticlesComponent from '@/components/particles';
 const categories = ['All', 'Web', 'Mobile', 'UI/UX', '3D', 'Backend']
 
 const projects = [
@@ -18,7 +19,7 @@ const projects = [
     image: '/global-series.jpg',
     category: ['ReactJs', 'StyledComponents', 'Javascript', 'Web'],
     technologies: ['React', 'Three.js', 'TailwindCSS'],
-    github: 'https://global-series.vercel.app/',
+    github: 'https://github.com/MaykGomes92',
     demo: 'https://www.linkedin.com/in/mayk-gomes-11b86222b/',
     featured: true,
   },
@@ -112,7 +113,8 @@ export default function Projetos() {
     return (
       <>
         <PageTransicao />
-        <motion.div className='pt-20 bg-[#121212] min-h-[100vh] max-w-[100vw] m-auto md:pb-0'
+        <ParticlesComponent/>
+        <motion.div className='relative z-4 pt-20 min-h-[100vh] max-w-[100vw] m-auto md:pb-0'
           animate={{ opacity: 1, }}
           initial={{ opacity: 0 }}
           transition={{ duration: .6, delay: 0.8 }}
@@ -191,7 +193,7 @@ export default function Projetos() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 p-8 items-center justify-items-center md:w-[80%] w-[100%] m-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 p-8 items-center justify-items-center w-[80%] m-auto">
             <AnimatePresence>
               {filteredProjects.length > 0 ? (
                 filteredProjects.map((project) => (

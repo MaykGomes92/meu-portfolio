@@ -20,7 +20,7 @@ export default function Sobre() {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setUpdateLoad(false);
-    }, 1000);
+    }, 1300);
 
     return () => clearTimeout(timer);
   }, []);

@@ -61,7 +61,7 @@ export default function SceneActive() {
   return (
     <div className="w-full h-[800px]"
     >
-      <motion.div className='relative m-auto z-50 max-w-[800px] p-5 transition-transform duration-1000 transform hover:scale-105'
+      <motion.div className='relative m-auto z-[99] max-w-[800px] p-5 transition-transform duration-1000 transform hover:scale-105'
         initial={{ opacity: 0, scale: 0.5, rotateY: -180 }}
         whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
         transition={{ duration: 1, }}>
@@ -144,7 +144,7 @@ export default function SceneActive() {
           {[
             { icon: <FaGithub color='#ffff' size='30px' />, url: "https://github.com/MaykGomes92", label: "GitHub" },
             { icon: <FaLinkedin color='#ffff' size='30px' />, url: "https://www.linkedin.com/in/mayk-gomes-11b86222b/", label: "LinkedIn" },
-            { icon: <MdOutlineMail color='#ffff' size='30px' />, url: "/contact", label: "Contact" }
+            { icon: <MdOutlineMail color='#ffff' size='30px' />, url: "/contato", label: "Contato" }
           ].map((social, index) => (
             <motion.a
               key={index}
