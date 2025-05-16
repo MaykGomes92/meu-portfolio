@@ -113,8 +113,8 @@ export default function Projetos() {
     return (
       <>
         <PageTransicao />
-        <ParticlesComponent/>
-        <motion.div className='relative z-4 pt-20 min-h-[100vh] max-w-[100vw] m-auto md:pb-0'
+        <ParticlesComponent id="particles"/>
+        <motion.div className='relative pt-20 min-h-[100vh] max-w-[100vw] m-auto md:pb-0 z-[4]'
           animate={{ opacity: 1, }}
           initial={{ opacity: 0 }}
           transition={{ duration: .6, delay: 0.8 }}
@@ -156,7 +156,7 @@ export default function Projetos() {
                   onClick={() => setActiveCategory(category)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`px-4 py-2 rounded-full text-white text-sm font-medium transition-colors cursor-pointer ${activeCategory === category
+                  className={`px-4 py-2 rounded-full text-white text-sm font-medium transition-colors  cursor-pointer ${activeCategory === category
                     ? 'bg-neon-blue text-deep-black'
                     : 'bg-white/10 text-light-gray hover:bg-white/20'
                     }`}
@@ -193,7 +193,7 @@ export default function Projetos() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 p-8 items-center justify-items-center w-[80%] m-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 p-8 items-center justify-items-center w-[80%] m-auto min-h-[600px]">
             <AnimatePresence>
               {filteredProjects.length > 0 ? (
                 filteredProjects.map((project) => (
