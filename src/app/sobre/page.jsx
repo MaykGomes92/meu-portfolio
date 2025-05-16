@@ -12,6 +12,7 @@ import Timeline from '@/components/MinhaTrajetoria/Timeline';
 import Sidebar from '@/components/Sidebar/Sidebar'
 import PageTransicao from '@/components/PageTransicao/PageTransicao';
 import ParticlesComponent from '@/components/particles';
+import Image from 'next/image';
 
 export default function Sobre() {
 
@@ -93,24 +94,29 @@ export default function Sobre() {
             initial={{ opacity: [0, 0.4, 0.5], y: -90 }}
             transition={{ duration: .5, delay: 1 }}
           >
-          <ParticlesComponent id="particles" />
+            <ParticlesComponent id="particles" />
             <h1 className='text-5xl font-bold text-white mb-10'>Sobre <span className='text-[#00d4ff]'>Mim</span></h1>
             <div className='md:flex text-white gap-8'>
               <div className='flex flex-col gap-4 text-[#b7b7b7] text-[18px] font-semibold'>
                 <span className='text-[#c0cccc] font-semibold'>Olá! Sou Mayk Gomes, um desenvolvedor Full-stack apaixonado por criar experiências digitais interativas e inovadoras.</span><br />
                 <p>
-                  Com mais de 7 anos de experiência no desenvolvimento web, especializei-me em tecnologias modernas como React, Next.js, TypeScript e Three.js. Minha paixão está em construir aplicações que são não apenas funcionais, mas também visualmente impressionantes e intuitivas para os usuários.
+                  Com mais de 2 anos de experiência no desenvolvimento web, especializei-me em tecnologias modernas como React, Next.js, TypeScript e Three.js. Minha paixão está em construir aplicações que são não apenas funcionais, mas também visualmente impressionantes e intuitivas para os usuários.
                 </p>
 
                 <p>
-                  Tenho experiência no desenvolvimento de aplicações web complexas, desde o planejamento e arquitetura até a implementação e lançamento. Trabalho confortavelmente tanto no front-end quanto no back-end, com um forte foco em performance, acessibilidade e experiência do usuário.
+                  Tenho experiência no desenvolvimento de aplicações web complexas, desde o planejamento e arquitetura até a implementação e lançamento. Trabalho tanto no front-end quanto me viro no back-end haha, com um forte foco em performance, acessibilidade e experiência do usuário.
                 </p>
                 <p>
                   Além do desenvolvimento web, tenho grande interesse em visualização de dados, gráficos 3D e realidade aumentada. Estou constantemente explorando novas tecnologias e técnicas para criar experiências digitais mais imersivas e interativas.
                 </p>
               </div>
               <div className='min-w-[340px] p-4 flex flex-col items-center rounded-2xl bg-[#2a2a2a] border-2 border-[#555555] hover:scale-105 transition-transform duration-600 ease-in-out md:mt-0 mt-8'>
-                <h1 className='w-40 h-40 border-2 border-neon-blue/50 rounded-full text-center leading-[160px] text-[#00d4ff] font-bold text-3xl bg-gradient-to-br from-neon-blue/30 to-deep-black '>MG</h1>
+                <Image
+                  src="/avatar.png"
+                  width={160}
+                  height={160}
+                  className='w-40 h-40 border-4 border-neon-blue/50 rounded-full text-center leading-[160px] text-[#00d4ff] font-bold text-3xl bg-gradient-to-br from-neon-blue/30 to-deep-black'
+                />
                 <h1 className='my-4 text-2xl font-semibold text-[#e0e0e0]'>Mayk Gomes</h1>
                 <h2 className='text-light-gray font-semibold'>Desenvolvedor Front-end</h2>
                 <ul className='flex justify-around'>
