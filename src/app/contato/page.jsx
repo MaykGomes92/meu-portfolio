@@ -1,5 +1,5 @@
 'use client'
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import SucessoContato from '@/components/SucessoContato/SucessoContato'
 import Header from '@/components/Header/Header'
@@ -58,12 +58,14 @@ export default function Page() {
       setIsSubmitting(false)
     }
   }
-  
+
 
   return (
     <>
       <PageTransicao />
-      <ParticlesComponent id="particles" />
+      <div className='hidden md:block'>
+        <ParticlesComponent id="particles" />
+      </div>
       <motion.div className="relative z-20 h-[100vh]"
         animate={{ opacity: 1, }}
         initial={{ opacity: 0 }}

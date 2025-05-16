@@ -81,7 +81,9 @@ export default function Sobre() {
     return (
       <>
         <PageTransicao />
-        <ParticlesComponent id="particles" />
+        <div className='hidden md:block'>
+          <ParticlesComponent id="particles" />
+        </div>
         <motion.div className='relative pt-30 max-w-[100vw] m-auto md:pb-0 pb-8 z-[2]'
           animate={{ opacity: 1, }}
           initial={{ opacity: 0 }}

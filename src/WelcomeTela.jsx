@@ -21,7 +21,9 @@ export default function WelcomeTela() {
         <Header />
         <Sidebar open={false} />
         <SceneActive />
-        <ParticlesComponent id="particles" />
+        <div className='hidden md:block'>
+          <ParticlesComponent id="particles" />
+        </div>
       </motion.div>
     </>
   )

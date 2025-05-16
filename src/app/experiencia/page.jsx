@@ -52,7 +52,9 @@ export default function Experiencia() {
     return (
       <>
         <PageTransicao />
-        <ParticlesComponent id="particles" />
+        <div className='hidden md:block'>
+          <ParticlesComponent id="particles" />
+        </div>
         <motion.div className='relative z-30 flex flex-col h-[100vh] p-2 md:p-0'
           animate={{ opacity: 1, y: 20 }}
           initial={{ opacity: 0, y: 0 }}

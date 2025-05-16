@@ -113,7 +113,9 @@ export default function Projetos() {
     return (
       <>
         <PageTransicao />
-        <ParticlesComponent id="particles"/>
+        <div className='hidden md:block'>
+          <ParticlesComponent id="particles" />
+        </div>
         <motion.div className='relative pt-20 min-h-[100vh] max-w-[100vw] m-auto md:pb-0 z-[4]'
           animate={{ opacity: 1, }}
           initial={{ opacity: 0 }}
@@ -202,7 +204,7 @@ export default function Projetos() {
                     initial={{ opacity: 0, y: 120 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4}}
+                    transition={{ duration: 0.4 }}
                     layout
                     className='w-[90%]'
                   >

@@ -30,7 +30,9 @@ export default function Habilidades() {
     return (
       <>
         <PageTransicao />
-        <ParticlesComponent id="particles" />
+                <div className='hidden md:block'>
+          <ParticlesComponent id="particles" />
+        </div>
         <motion.div className='relative z-3 flex flex-col md:justify-center mt-12 p-2 h-[100vh] md:mt-0 md:p-0'
           animate={{ opacity: 1, }}
           initial={{ opacity: 0 }}
