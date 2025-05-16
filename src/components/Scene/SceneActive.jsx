@@ -164,7 +164,7 @@ export default function SceneActive() {
           ))}
         </motion.div>
       </motion.div>
-      <Canvas camera={{ position: [0, 2, 5], fov: 50 }} className='absolute top-[-100%] h-[700px] opacity-65 z-40'>
+      <Canvas camera={{ position: [0, 2, 5], fov: 50 }} className='hidden md:block absolute top-[-100%] h-[700px] opacity-65 z-40'>
         <ambientLight intensity={0.1} />
         <directionalLight position={[2, 5, 2]} intensity={1} />
         <Environment preset="sunset" />
