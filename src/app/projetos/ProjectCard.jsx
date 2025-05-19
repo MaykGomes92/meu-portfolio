@@ -8,7 +8,7 @@ export default function ProjectCard({ project }) {
 
   return (
     <motion.div 
-      className="group relative overflow-hidden rounded-xl bg-[#1e293b50] backdrop-blur-sm border border-primary-500/10 flex flex-col shadow-lg"
+      className="group relative overflow-hidden rounded-xl bg-[#1e293b50] backdrop-blur-sm border border-[#6366f110] flex flex-col shadow-lg"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -17,7 +17,7 @@ export default function ProjectCard({ project }) {
     >
       {/* Imagem */}
       <div className="relative overflow-hidden aspect-video w-full group">
-        <div className={`absolute inset-0 bg-gradient-to-r from-primary-700 to-primary-500 ${!imageError ? 'opacity-0' : 'opacity-100'}`} />
+        <div className={`absolute inset-0 bg-gradient-to-r from-[#4338ca] to-[#6366f1] ${!imageError ? 'opacity-0' : 'opacity-100'}`} />
         {!imageError && (
           <Image
             src={project.image}
@@ -59,7 +59,7 @@ export default function ProjectCard({ project }) {
           )}
         </div>
         {project.featured && (
-          <div className="absolute top-3 right-3 bg-accent/90 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg z-10 flex items-center gap-1.5">
+          <div className="absolute top-3 right-3 bg-[#823cf590] backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg z-10 flex items-center gap-1.5">
             <svg width="12" height="12" fill="currentColor" viewBox="0 0 16 16">
               <path d="M3.612 15.443c-.386.198..."></path>
             </svg>
@@ -70,7 +70,7 @@ export default function ProjectCard({ project }) {
 
       {/* Informações */}
       <div className="p-6 flex-1 flex flex-col">
-        <a href={project.github} target='_blank' className="text-xl font-bold mb-2 text-white group-hover:text-primary-400 transition-colors">{project.title}</a>
+        <a href={project.github} target='_blank' className="text-xl font-bold mb-2 text-white group-hover:text-[#818cf8] transition-colors">{project.title}</a>
         <p className="text-gray-300 text-sm mb-4 flex-1 line-clamp-3">{project.description}</p>
 
         <div className="mb-3 flex flex-wrap gap-2">
@@ -84,7 +84,7 @@ export default function ProjectCard({ project }) {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-primary-500/10">
+        <div className="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-[#6366f150]">
           {project.technologies.map((tech, index) => (
             <span 
               key={index} 

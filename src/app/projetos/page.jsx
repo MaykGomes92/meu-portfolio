@@ -145,7 +145,7 @@ export default function Projetos() {
           </motion.p>
 
           {/* Filters */}
-          <div className="mb-10">
+          <div className="mb-10 md:p-0 p-2">
             <motion.div
               className="flex flex-wrap justify-center gap-3 mb-6"
               initial={{ opacity: 0, y: 20 }}
@@ -195,7 +195,7 @@ export default function Projetos() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 p-8 items-center justify-items-center w-[80%] m-auto min-h-[600px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:p-8 items-center justify-items-center w-[80%] m-auto min-h-[600px]">
             <AnimatePresence>
               {filteredProjects.length > 0 ? (
                 filteredProjects.map((project) => (
