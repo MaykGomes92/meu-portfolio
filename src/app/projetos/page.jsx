@@ -9,7 +9,7 @@ import Loading from '@/components/Loading';
 import Sidebar from '@/components/Sidebar/Sidebar'
 import PageTransicao from '@/components/PageTransicao/PageTransicao';
 import ParticlesComponent from '@/components/particles';
-const categories = ['All', 'Web', 'Mobile', 'UI/UX', '3D', 'Backend']
+const categories = ['Todos', 'Web', 'Mobile', 'UI/UX', '3D', 'Backend']
 
 const projects = [
   {
@@ -37,10 +37,10 @@ const projects = [
   {
     id: 3,
     title: 'Mercedez WebSite',
-    description: 'Weather forecast app with beautiful UI and smooth animations',
+    description: 'Site institucional da Mercedez-Benz para trabalho de faculdade!',
     image: '/img-mercedes.png',
     category: ['Web', 'UI/UX'],
-    technologies: ['HTML5','Javascript','React'],
+    technologies: ['Keyframes','Javascript','React'],
     github: 'https://github.com/MaykGomes92/projeto-web-site-car',
     demo: 'https://projeto-web-site-car-q9pp4diuu-mayk-gomes98-hotmailcom.vercel.app/',
     featured: true,
@@ -92,11 +92,11 @@ export default function Projetos() {
     return () => clearTimeout(timer);
   }, []);
 
-  const [activeCategory, setActiveCategory] = React.useState('All')
+  const [activeCategory, setActiveCategory] = React.useState('Todos')
   const [searchQuery, setSearchQuery] = React.useState('')
 
   const filteredProjects = projects.filter((project) => {
-    const matchesCategory = activeCategory === 'All' || project.category.includes(activeCategory)
+    const matchesCategory = activeCategory === 'Todos' || project.category.includes(activeCategory)
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.technologies.some(tech => tech.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -132,7 +132,7 @@ export default function Projetos() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.3 }}
           >
-            My Projects
+            Meus Projetos
           </motion.h1>
 
           <motion.p
@@ -141,7 +141,7 @@ export default function Projetos() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.3 }}
           >
-            A collection of my work across web, mobile, and 3D interactive experiences
+            Uma coleção do meu trabalho em experiências interativas para web, dispositivos móveis e 3D.
           </motion.p>
 
           {/* Filters */}
@@ -177,7 +177,7 @@ export default function Projetos() {
               <div className="relative w-full max-w-md">
                 <input
                   type="text"
-                  placeholder="Search projects by name, description or technology..."
+                  placeholder="Procure projetos pelo nome, descrição ou tecnologia..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full bg-white/10 border-2 border-neon-blue/30 focus:border-neon-blue rounded-lg py-3 px-4 pl-10 text-[#c7cbd2] outline-none transition-colors"
@@ -220,7 +220,7 @@ export default function Projetos() {
                 >
                   <p className="text-xl text-light-gray/70">No projects found matching your criteria</p>
                   <button
-                    onClick={() => { setActiveCategory('All'); setSearchQuery('') }}
+                    onClick={() => { setActiveCategory('Todos'); setSearchQuery('') }}
                     className="mt-4 text-neon-blue hover:underline"
                   >
                     Clear filters
